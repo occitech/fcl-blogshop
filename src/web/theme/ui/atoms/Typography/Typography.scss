@@ -1,5 +1,10 @@
-$mainFontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "./Fonts";
+
+$mainFontFamily: Playfair Display, -apple-system, BlinkMacSystemFont, Segoe UI,
+  Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  sans-serif;
+
+$secondaryFontFamily: Open Sans, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans;
 
 $regular: 400;
 $semiBold: 500;
