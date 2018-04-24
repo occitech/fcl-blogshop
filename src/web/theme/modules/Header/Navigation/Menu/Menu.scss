@@ -1,0 +1,94 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 0;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+
+  &.close {
+    transform: translateX(calc(-100% + 3em));
+
+    button.menu__button.button {
+      background-color: $backgroundColor;
+      padding: 1em 1em;
+    }
+    .menu__navButton {
+      flex: 1;
+    }
+  }
+
+  &.open {
+    button.menu__button.button {
+      background-color: $brandSecondary;
+    }
+    .menu__navButton {
+      flex: 1;
+    }
+  }
+
+  button.menu__button.button {
+    padding: 1em 1em;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: -3em;
+    top: 0;
+    width: 100%;
+    max-width: 32em;
+    height: 100vh;
+  }
+  &__navButton {
+    display: flex;
+    .button {
+      background-color: $backgroundColor;
+      width: 100%;
+    }
+  }
+  .selected button.button {
+    background-color: $brandSecondary;
+    color: $reverseFontColor;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .menu {
+    z-index: 0;
+    position: relative;
+    transform: none;
+    &.close {
+      transform: unset;
+      .menu__navButton {
+        flex: unset;
+      }
+    }
+    &.button {
+      display: none;
+    }
+    button.menu__button.button {
+      display: none;
+    }
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      left: 0;
+      height: unset;
+      max-width: unset;
+    }
+    .button {
+      background-color: $backgroundColor;
+      height: 3em;
+    }
+    &__navButton button.button {
+      background-color: $backgroundColor;
+    }
+    .selected button.button {
+      background-color: $brandSecondary;
+      color: $reverseFontColor;
+    }
+  }
+}
