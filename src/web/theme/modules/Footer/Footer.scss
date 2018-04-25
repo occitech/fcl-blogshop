@@ -59,5 +59,6 @@ $moutainHeight: 6em;
     position: absolute;
     margin-top: -$moutainHeight;
     right: $moutainHeight;
+    z-index: -1;
   }
 }
