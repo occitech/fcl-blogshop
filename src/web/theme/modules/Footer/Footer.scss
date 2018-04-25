@@ -1,13 +1,14 @@
 $moutainHeight: 6em;
 
 .footer {
-  background: $brandPrimaryBackground;
+  background: $brandSecondaryBackground;
   color: $reverseFontColor;
   text-align: center;
   padding: 1em;
   display: flex;
   flex-direction: column;
   margin-top: $moutainHeight;
+  font-family: $secondaryFontFamily;
 
   & > div {
     padding: 3em 3rem;
