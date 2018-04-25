@@ -21,11 +21,11 @@ $warning: #fd7737;
 $error: #ff0000;
 
 $backgroundColor: $white;
+$fontColor: $brandSecondary;
 $fontPrimaryColor: $brandPrimary;
-$fontSecondaryColor: $brandSecondary;
 $fontDisabled: $shade05;
 
-$reverseBackgroundColor: $fontSecondaryColor;
+$reverseBackgroundColor: $fontColor;
 $reverseFontColor: $backgroundColor;
 
 $titleColor: $brandPrimary;
