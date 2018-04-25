@@ -1,21 +1,63 @@
+$moutainHeight: 6em;
+
 .footer {
   background: $brandPrimaryBackground;
   color: $reverseFontColor;
   text-align: center;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-top: $moutainHeight;
+
+  & > div {
+    padding: 3em 3rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      height: 1px;
+      background: $backgroundColor;
+      left: 10%;
+    }
+  }
+
+  div:last-child:after {
+    content: unset;
+    background: red;
+  }
 
   &__logo {
     display: flex;
     flex-direction: column;
-    margin: 4em auto;
-    &:after {
-      content: "";
-      position: relative;
-      top: 3em;
-      width: 80%;
-      height: 1px;
-      background: $backgroundColor;
-      margin: auto;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .category {
+      &-list-title {
+        font-size: $normal;
+        text-transform: uppercase;
+        font-weight: $bold;
+      }
     }
+  }
+
+  &__copyright {
+    font-size: $small;
+  }
+
+  .mountain {
+    height: 164px;
+    width: 272px;
+    position: absolute;
+    margin-top: -$moutainHeight;
+    right: $moutainHeight;
   }
 }
