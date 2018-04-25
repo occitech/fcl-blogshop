@@ -4,13 +4,16 @@ import StoreDetails from "../StoreDetails";
 import StoreContact from "../StoreContact";
 import EnhanceFooter from "./EnhanceFooter";
 import FooterQuery from "./FooterQuery.gql";
+import Logo from "theme/ui/atoms/Logo";
 import "./Footer.scss";
 
 const Footer = ({ store }) => {
   return (
     <footer className="footer">
-      {store && store.owner && <StoreDetails owner={store.owner} />}
-      {store && store.phone && <StoreContact phone={store.phone} />}
+      <div className="footer__logo">
+        <Logo />
+        <span>Don’t just buy a product, buy an experience!</span>
+      </div>
     </footer>
   );
 };

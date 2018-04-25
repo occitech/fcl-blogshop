@@ -19,6 +19,12 @@
     padding-bottom: 1em;
     @include horizontal-spacing();
   }
+
+  &__logo {
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 @media screen and (min-width: $largeDesktop) {
