@@ -1,0 +1,13 @@
+.sub-menu {
+  position: absolute;
+  top: 3em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 3em;
+  background: white;
+  transition: opacity 0.2s ease-in-out;
+  text-align: left;
+  &__navButton {
+    padding: 0.5em 0em;
+  }
+}
