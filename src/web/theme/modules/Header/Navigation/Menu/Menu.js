@@ -4,41 +4,19 @@ import Button from "theme/ui/atoms/Button";
 import Icon from "theme/ui/atoms/Icon";
 import { withState, withHandlers } from "recompose";
 import compose from "recompose/compose";
+import SubMenu from "theme/modules/Header/Navigation/Menu/SubMenu";
 
-const Menu = ({
-  setNavigationStep,
-  navigationSteps,
-  setOpenStateMenu,
-  isMenuOpened
-}) => {
+const Menu = ({ categories, setOpenStateMenu, isMenuOpened }) => {
   const menuClasses = `menu ${isMenuOpened ? `open` : `close`}`;
   return (
     <div className={menuClasses}>
       <div className="menu__container">
-        {navigationSteps.map(
-          step =>
-            step.selected ? (
-              <div key={step.name} className="menu__navButton selected">
-                <Button
-                  onClick={() => {
-                    setNavigationStep(step);
-                  }}
-                >
-                  {step.name}
-                </Button>
-              </div>
-            ) : (
-              <div key={step.name} className="menu__navButton">
-                <Button
-                  onClick={() => {
-                    setNavigationStep(step);
-                  }}
-                >
-                  {step.name}
-                </Button>
-              </div>
-            )
-        )}
+        {categories.map(category => (
+          <div key={category.name} className="menu__navButton">
+            <Button onClick={() => {}}>{category.name}</Button>
+            <SubMenu category={category} />
+          </div>
+        ))}
       </div>
       <button onClick={setOpenStateMenu} className="menu__button button">
         <Icon icon={"menu"} />
@@ -48,8 +26,7 @@ const Menu = ({
 };
 
 Menu.propTypes = {
-  navigationSteps: PropTypes.array,
-  setNavigationStep: PropTypes.func
+  categories: PropTypes.array
 };
 
 export default compose(
