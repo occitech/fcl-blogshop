@@ -1,0 +1,8 @@
+query Home($id: Int!) {
+  category(id: $id) {
+    children{
+      id,
+      name
+    }
+  }
+}

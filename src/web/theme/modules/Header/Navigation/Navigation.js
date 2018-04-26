@@ -3,7 +3,7 @@ import { CartModal } from "../../Cart";
 import Button from "theme/ui/atoms/Button";
 import IconWithLabel from "theme/ui/molecules/IconWithLabel";
 
-const Navigation = () => {
+const Navigation = ({ category }) => {
   return (
     <nav>
       <CartModal>
