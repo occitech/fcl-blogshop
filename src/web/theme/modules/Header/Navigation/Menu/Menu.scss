@@ -1,3 +1,15 @@
+@keyframes fadeIn {
+  from {
+    display: unset;
+    opacity: 0;
+  }
+
+  to {
+    display: unset;
+    opacity: 1;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -5,6 +17,11 @@
   top: 0;
   transition: transform 0.2s ease-in-out;
   z-index: 1;
+
+  .sub-menu {
+    opacity: 0;
+    display: none;
+  }
 
   &.close {
     transform: translateX(calc(-100% + 3em));
@@ -15,6 +32,15 @@
     }
     .menu__navButton {
       flex: 1;
+
+      &:hover {
+        .sub-menu {
+          display: unset;
+          animation-duration: 0.5s;
+          animation-name: fadeIn;
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -40,6 +66,7 @@
     width: 100%;
     max-width: 32em;
     height: 100vh;
+    padding-right: 7em;
   }
   &__navButton {
     display: flex;
