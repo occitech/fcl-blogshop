@@ -1,7 +1,3 @@
-$baseMediaGridHeight: 60rem;
-$baseMediaHeight: 15rem;
-$mediaSpacing: 2rem;
-
 .media-grid {
   display: flex;
   flex-direction: column;
@@ -10,20 +6,24 @@ $mediaSpacing: 2rem;
   height: $baseMediaGridHeight;
   overflow: hidden;
 
-  .media {
+  .media-container {
     flex: 1 1 $baseMediaHeight;
     width: calc(100% - #{$mediaSpacing * 2});
     margin: $mediaSpacing;
 
-    height: 18em;
+    height: 3em;
   }
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $desktop) {
   .media-grid {
-    .media {
+    .media-container {
       flex: 1 1 $baseMediaHeight;
       width: calc(50% - #{$mediaSpacing * 2});
+      .product-item-title {
+        height: calc(100% - #{$mediaSpacing});
+        padding: auto 10;
+      }
     }
   }
 }
