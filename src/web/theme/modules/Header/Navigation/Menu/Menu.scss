@@ -1,0 +1,118 @@
+@keyframes fadeIn {
+  from {
+    display: unset;
+    opacity: 0;
+  }
+
+  to {
+    display: unset;
+    opacity: 1;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 0;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  left: -$headerTabletWidth;
+
+  .sub-menu {
+    opacity: 0;
+    display: none;
+  }
+
+  &.close {
+    transform: translateX(calc(-100% + #{$headerTabletWidth * 2}));
+
+    .menu__button.button {
+      background-color: $backgroundColor;
+      padding: 1em;
+    }
+  }
+
+  &.open {
+    .menu__button.button {
+      background-color: $brandSecondary;
+    }
+  }
+  &__navButton {
+    flex: 1;
+    position: relative;
+
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation-duration: 0.5s;
+        animation-name: fadeIn;
+        opacity: 1;
+      }
+    }
+  }
+  .menu__button.button {
+    padding: 1em;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    max-width: 32em;
+    height: 100vh;
+  }
+  &__navButton {
+    display: flex;
+    .button {
+      background-color: $backgroundColor;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .menu {
+    z-index: 0;
+    position: relative;
+    transform: none;
+
+    &.close {
+      transform: unset;
+      .menu__navButton {
+        flex: unset;
+      }
+    }
+    &.button {
+      display: none;
+    }
+    .menu__button.button {
+      display: none;
+    }
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      left: 0;
+      height: unset;
+      max-width: unset;
+      padding-right: 7em;
+    }
+    .button {
+      background-color: $backgroundColor;
+      height: 3em;
+    }
+    &__navButton .button {
+      background-color: $backgroundColor;
+    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .menu {
+    left: calc(-2em - #{$headerTabletWidth});
+  }
+}
