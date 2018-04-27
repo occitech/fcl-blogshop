@@ -17,6 +17,7 @@
   top: 0;
   transition: transform 0.2s ease-in-out;
   z-index: 1;
+  left: -$headerTabletWidth;
 
   .sub-menu {
     opacity: 0;
@@ -24,49 +25,46 @@
   }
 
   &.close {
-    transform: translateX(calc(-100% + 3em));
+    transform: translateX(calc(-100% + #{$headerTabletWidth * 2}));
 
-    button.menu__button.button {
+    .menu__button.button {
       background-color: $backgroundColor;
-      padding: 1em 1em;
-    }
-    .menu__navButton {
-      flex: 1;
-
-      &:hover {
-        .sub-menu {
-          display: unset;
-          animation-duration: 0.5s;
-          animation-name: fadeIn;
-          opacity: 1;
-        }
-      }
+      padding: 1em;
     }
   }
 
   &.open {
-    button.menu__button.button {
+    .menu__button.button {
       background-color: $brandSecondary;
     }
-    .menu__navButton {
-      flex: 1;
+  }
+  &__navButton {
+    flex: 1;
+    position: relative;
+
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation-duration: 0.5s;
+        animation-name: fadeIn;
+        opacity: 1;
+      }
     }
   }
-
-  button.menu__button.button {
-    padding: 1em 1em;
+  .menu__button.button {
+    padding: 1em;
   }
 
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    left: -3em;
     top: 0;
     width: 100%;
     max-width: 32em;
     height: 100vh;
-    padding-right: 7em;
   }
   &__navButton {
     display: flex;
@@ -75,10 +73,6 @@
       width: 100%;
     }
   }
-  .selected button.button {
-    background-color: $brandSecondary;
-    color: $reverseFontColor;
-  }
 }
 
 @media screen and (min-width: $desktop) {
@@ -86,6 +80,7 @@
     z-index: 0;
     position: relative;
     transform: none;
+
     &.close {
       transform: unset;
       .menu__navButton {
@@ -95,7 +90,7 @@
     &.button {
       display: none;
     }
-    button.menu__button.button {
+    .menu__button.button {
       display: none;
     }
     &__container {
@@ -105,17 +100,19 @@
       left: 0;
       height: unset;
       max-width: unset;
+      padding-right: 7em;
     }
     .button {
       background-color: $backgroundColor;
       height: 3em;
     }
-    &__navButton button.button {
+    &__navButton .button {
       background-color: $backgroundColor;
     }
-    .selected button.button {
-      background-color: $brandSecondary;
-      color: $reverseFontColor;
-    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .menu {
+    left: calc(-2em - #{$headerTabletWidth});
   }
 }
