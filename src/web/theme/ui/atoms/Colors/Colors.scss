@@ -1,8 +1,7 @@
-$brandPrimaryBackground: #0a5e66;
-$brandHoverPrimary: #12828c;
-$brandPrimary: #39b4bf;
-$brandSecondary: #818199;
-
+$brandPrimaryBackground: #c49413;
+$brandHoverPrimary: #3a3425;
+$brandPrimary: #e7af18;
+$brandSecondary: #4c4532;
 $white: #fff;
 $black: #000;
 
@@ -22,9 +21,9 @@ $warning: #fd7737;
 $error: #ff0000;
 
 $backgroundColor: $white;
-$fontColor: #333333;
+$fontColor: $brandSecondary;
+$fontPrimaryColor: $brandPrimary;
 $fontDisabled: $shade05;
-$fontSecondaryColor: $shade05;
 
 $reverseBackgroundColor: $fontColor;
 $reverseFontColor: $backgroundColor;
