@@ -3,7 +3,7 @@
   color: $fontSecondaryColor;
   text-align: center;
   height: 7em;
-  padding: 1em 0em;
+  padding: 1em 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -39,5 +39,3 @@
     }
   }
 }
-
-@import "./Navigation/Menu/Menu";

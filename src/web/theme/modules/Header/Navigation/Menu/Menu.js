@@ -5,6 +5,7 @@ import Icon from "theme/ui/atoms/Icon";
 import { withState, withHandlers } from "recompose";
 import compose from "recompose/compose";
 import SubMenu from "theme/modules/Header/Navigation/Menu/SubMenu";
+import "./Menu.scss";
 
 const Menu = ({ categories, setOpenStateMenu, isMenuOpened }) => {
   const menuClasses = `menu ${isMenuOpened ? `open` : `close`}`;
