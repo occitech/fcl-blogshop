@@ -1,5 +1,6 @@
 query Header($id: Int!,$, params: QueryInput!) {
   category(id: $id) {
+    id
     children{
       id,
       name
