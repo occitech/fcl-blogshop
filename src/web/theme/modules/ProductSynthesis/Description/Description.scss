@@ -1,8 +1,5 @@
 @media screen and (min-width: $tablet) {
   .product-description {
-    display: flex;
-    margin: 0 -2em;
-
     > p {
       flex: 1;
       padding: 0 2em;
@@ -14,6 +11,11 @@
   .product-description {
     flex-direction: column;
     margin-bottom: 2rem;
+    h2 {
+      color: $fontPrimaryColor;
+      border-left: 2px solid $brandPrimary;
+      padding-left: 1em;
+    }
   }
 }
 
