@@ -4,14 +4,41 @@ $verticalSpacing: 2rem;
   padding: $verticalSpacing 0;
 
   &__title {
+    position: absolute;
+    width: 100%;
     text-align: center;
     margin-bottom: $verticalSpacing;
+    margin-top: -12em;
+    color: $fontPrimaryColor;
+    font-weight: $bold;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    .product-info {
+      flex: 1;
+    }
+    .product-description {
+      flex: 2;
+    }
+    & > div:last-child {
+      border-top: 1px solid $shade02;
+      padding: 3em 0;
+    }
   }
 }
 
 .product-actions {
   text-align: center;
   margin-bottom: $verticalSpacing;
+
+  .button {
+    color: $reverseFontColor;
+    .price {
+      color: $reverseFontColor;
+    }
+  }
 }
 
 @media screen and (min-width: $tablet) {
@@ -21,8 +48,28 @@ $verticalSpacing: 2rem;
     flex-flow: row wrap;
 
     &__title {
+      position: absolute;
       text-align: left;
       margin-bottom: 2rem;
+      top: -12em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    .product-info {
+      flex: 1;
+    }
+    .product-description {
+      flex: 2;
+    }
+    & > div:last-child {
+      border-left: 1px solid $shade02;
+      padding: 0 3em;
     }
   }
 
@@ -42,7 +89,28 @@ $verticalSpacing: 2rem;
     }
 
     &__title {
+      position: absolute;
       margin-bottom: 2rem;
+      top: -12em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      .product-info {
+        flex: 1;
+      }
+      .product-description {
+        flex: 2;
+      }
+      & > div:last-child {
+        border-left: 1px solid $shade02;
+        border-top: none;
+        padding: 0 3em;
+      }
     }
   }
 

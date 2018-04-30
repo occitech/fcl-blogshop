@@ -2,10 +2,13 @@ import React from "react";
 import { CartModal } from "../../Cart";
 import Button from "theme/ui/atoms/Button";
 import IconWithLabel from "theme/ui/molecules/IconWithLabel";
+import Menu from "./Menu";
+import "./Navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({ category }) => {
   return (
-    <nav>
+    <nav className="nav">
+      <Menu categories={category.children} />
       <CartModal>
         {openCart => (
           <Button type="invisible" onClick={openCart}>

@@ -1,0 +1,42 @@
+[
+  {
+    "attribute": "Deck dimensions",
+    "value": "37,5 x 11,25 inches"
+  },
+  {
+    "attribute": "Deck materials",
+    "value": "light weight wood-core composite"
+  },
+  {
+    "attribute": "Deck flex",
+    "value": "stiff for stability and speed"
+  },
+  {
+    "attribute": "Weight",
+    "value": "14,5 lbs"
+  },
+  {
+    "attribute": "Power",
+    "value": "1000 watts continuous / 1600 watts max"
+  },
+  {
+    "attribute": "Battery",
+    "value": "43,2 v / 97 wh / Lithium ion"
+  },
+  {
+    "attribute": "Max rider capacity",
+    "value": "250 lbs"
+  },
+  {
+    "attribute": "Wheels",
+    "value": "79 mm / 78a"
+  },
+  {
+    "attribute": "Charge time",
+    "value": "90 min"
+  },
+  {
+    "attribute": "Connectivity",
+    "value": "Bluetooth LE"
+  }
+]

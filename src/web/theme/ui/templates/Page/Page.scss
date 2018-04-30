@@ -1,5 +1,5 @@
 .page {
   @include horizontal-spacing();
-  max-width: $desktop;
+  max-width: $largeDesktop;
   margin: 3rem auto;
 }

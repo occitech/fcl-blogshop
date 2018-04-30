@@ -1,10 +1,19 @@
 import React from "react";
 import AddToCart from "theme/ui/molecules/AddToCart";
+import { CartModal } from "../../Cart";
+import Price from "theme/ui/atoms/Typography/Price";
 
 const Actions = ({ product }) => {
   return (
     <div className="product-actions">
-      <AddToCart sku={product.sku}>Add to cart</AddToCart>
+      <CartModal>
+        {openCart => (
+          <AddToCart sku={product.sku} onAdded={openCart}>
+            Add to cart -{" "}
+            <Price price={product.prices.finalPrice.priceInclTax} />
+          </AddToCart>
+        )}
+      </CartModal>
     </div>
   );
 };

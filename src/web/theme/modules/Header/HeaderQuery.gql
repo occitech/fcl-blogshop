@@ -1,0 +1,26 @@
+query Header($id: Int!,$, params: QueryInput!) {
+  category(id: $id) {
+    id
+    children{
+      id,
+      name
+      }
+    layer(params: $params) {
+        products {
+            name
+            imageUrl
+            giftMessageAvailable
+            type_id
+            sku
+            path
+            priority
+            changefreq
+            description
+            desc
+            lastmod
+            meta_title
+            meta_description
+        }
+      }
+  }
+}

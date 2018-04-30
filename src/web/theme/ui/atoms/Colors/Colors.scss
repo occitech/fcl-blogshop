@@ -1,9 +1,14 @@
-$brandPrimaryBackground: #0a5e66;
-$brandHoverPrimary: #12828c;
-$brandPrimary: #39b4bf;
-$brandSecondary: #818199;
+$brandPrimaryBackground: #c49413;
+$brandHoverPrimary: #c49413;
+$brandPrimary: #e7af18;
+$brandSecondary: #4c4532;
+$brandTertiary: #28cc77;
 $white: #fff;
 $black: #000;
+
+$brandPrimaryBackground: #c49413;
+$brandSecondaryBackground: #4c4532;
+$brandHoverPrimary: #3a3425;
 
 $orange: #ff5501;
 $red: #ff0000;
@@ -15,15 +20,15 @@ $shade04: #707373;
 $shade05: #333333;
 $shade06: #252626;
 
-$success: #22aa50;
+$success: #28cc77;
 $info: #efb800;
 $warning: #fd7737;
 $error: #ff0000;
 
 $backgroundColor: $white;
-$fontColor: #333333;
+$fontColor: $brandSecondary;
+$fontPrimaryColor: $brandPrimary;
 $fontDisabled: $shade05;
-$fontSecondaryColor: $shade05;
 
 $reverseBackgroundColor: $fontColor;
 $reverseFontColor: $backgroundColor;
