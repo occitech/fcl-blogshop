@@ -32,6 +32,13 @@ $verticalSpacing: 2rem;
 .product-actions {
   text-align: center;
   margin-bottom: $verticalSpacing;
+
+  .button {
+    color: $reverseFontColor;
+    .price {
+      color: $reverseFontColor;
+    }
+  }
 }
 
 @media screen and (min-width: $tablet) {
