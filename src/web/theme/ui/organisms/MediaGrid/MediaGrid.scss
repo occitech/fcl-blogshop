@@ -20,10 +20,6 @@
     .media-container {
       flex: 1 1 $baseMediaHeight;
       width: calc(50% - #{$mediaSpacing * 2});
-      .product-item-title {
-        height: calc(100% - #{$mediaSpacing});
-        padding: auto 10;
-      }
     }
   }
 }
