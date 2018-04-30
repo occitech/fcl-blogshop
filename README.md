@@ -13,7 +13,6 @@ In our Blogshop theme, we’re giving a core place to the product description. W
 ![product page](pp.png)
 
 ## Installation instructions
-
 [See Front-Commerce Lite general setup guide](https://github.com/front-commerce/front-commerce-lite/blob/master/README.md)
 
 ## Going in production
