@@ -1,34 +1,47 @@
 .header {
-  background: $brandPrimaryBackground;
-  color: $reverseFontColor;
+  background: $backgroundColor;
+  color: $fontColor;
   text-align: center;
   height: 7em;
-  padding: 1em;
+  padding: 1em 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid $shade02;
 
   &__container {
     flex: 1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: $desktop;
-    margin: 0 auto;
+    margin: 0;
     padding-top: 1em;
     padding-bottom: 1em;
     @include horizontal-spacing();
   }
 
+  &__nav {
+    flex: 1;
+  }
   &__logo {
+    display: none;
     a {
       text-decoration: none;
     }
   }
 }
 
-@media screen and (min-width: $largeDesktop) {
-  .header__container {
-    max-width: $largeDesktop;
+@media screen and (min-width: $desktop) {
+  .header {
+    &__container {
+      max-width: $largeDesktop;
+    }
+
+    &__logo {
+      display: unset;
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }
