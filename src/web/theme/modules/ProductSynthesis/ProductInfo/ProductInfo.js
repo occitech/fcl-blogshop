@@ -21,8 +21,8 @@ const ProductInfo = ({ product }) => {
       <div className="product-info__specification">
         <H2>Products specifications</H2>
         <span className="product-info__specification__description">
-          You can find here the product dimensions, weight and other usefull
-          informations.
+          You can find here the product dimensions, weight and other useful
+          information.
         </span>
         {infos.map(info => (
           <div className="product-info__specification__attribute">
