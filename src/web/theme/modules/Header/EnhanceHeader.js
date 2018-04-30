@@ -5,15 +5,15 @@ import withProps from "recompose/withProps";
 const CATEGORY_ID = 49;
 const SIZE = 9;
 
-export default HomeQuery =>
+export default HeaderQuery =>
   compose(
     withProps(props => ({
-      size: SIZE
+      categoryId: CATEGORY_ID
     })),
-    graphql(HomeQuery, {
+    graphql(HeaderQuery, {
       options: props => ({
         variables: {
-          id: CATEGORY_ID,
+          id: props.categoryId,
           params: {
             size: props.size,
             from: 0
@@ -22,7 +22,6 @@ export default HomeQuery =>
       }),
       props: ({ data }) => ({
         category: data.category,
-        store: data.store,
         loading: data.loading
       })
     })

@@ -1,10 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
+import "./Logo.scss";
 
-const Logo = () => (
-  <span className="logo">
-    <img src={logo} alt="Front-Commerce" />
-  </span>
-);
+const Logo = () => <span className="logo">Blog & Shop</span>;
 
 export default Logo;
