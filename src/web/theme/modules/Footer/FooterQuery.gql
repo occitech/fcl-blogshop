@@ -1,7 +1,11 @@
-#import "./FooterFragment.gql"
-
-query FooterQuery {
-  store {
-    ...FooterFragment
+query FooterQuery($id: Int!) {
+  category(id: $id){
+    id
+    name
+    description
+    children {
+      id
+      name
+    }
   }
 }

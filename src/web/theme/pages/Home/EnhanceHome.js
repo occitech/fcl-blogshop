@@ -8,13 +8,12 @@ const SIZE = 9;
 export default HomeQuery =>
   compose(
     withProps(props => ({
-      categoryId: CATEGORY_ID,
       size: SIZE
     })),
     graphql(HomeQuery, {
       options: props => ({
         variables: {
-          id: props.categoryId,
+          id: CATEGORY_ID,
           params: {
             size: props.size,
             from: 0

@@ -75,11 +75,18 @@
   }
 }
 
+@media screen and (min-width: $tablet) {
+  .menu {
+    left: calc(-2em - #{$headerTabletWidth});
+  }
+}
+
 @media screen and (min-width: $desktop) {
   .menu {
     z-index: 0;
     position: relative;
     transform: none;
+    left: 0;
 
     &.close {
       transform: unset;
@@ -109,10 +116,5 @@
     &__navButton .button {
       background-color: $backgroundColor;
     }
-  }
-}
-@media screen and (min-width: $tablet) {
-  .menu {
-    left: calc(-2em - #{$headerTabletWidth});
   }
 }

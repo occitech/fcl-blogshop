@@ -25,6 +25,9 @@
   }
   &__logo {
     display: none;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -36,6 +39,9 @@
 
     &__logo {
       display: unset;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
