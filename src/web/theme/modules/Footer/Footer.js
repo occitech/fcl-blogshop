@@ -10,7 +10,6 @@ import "./Footer.scss";
 import Mountain from "./Mountains.png";
 
 const Footer = ({ loading, category }) => {
-  console.log(Mountain);
   return (
     <footer className="footer">
       <img className="mountain" src={Mountain} alt="mountain" />

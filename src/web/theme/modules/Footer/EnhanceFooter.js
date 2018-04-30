@@ -15,10 +15,9 @@ export default FooterQuery =>
           id: props.categoryId
         }
       }),
-      props: ({ data }) =>
-        console.log("data", data) || {
-          loading: data.loading,
-          category: data.category
-        }
+      props: ({ data }) => ({
+        loading: data.loading,
+        category: data.category
+      })
     })
   );
