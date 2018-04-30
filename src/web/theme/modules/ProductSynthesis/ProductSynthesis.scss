@@ -16,7 +16,7 @@ $verticalSpacing: 2rem;
   &__content {
     display: flex;
     flex-direction: column;
-    .add-to-cart-section {
+    .product-info {
       flex: 1;
     }
     .product-description {
@@ -54,7 +54,7 @@ $verticalSpacing: 2rem;
   &__content {
     display: flex;
     flex-direction: row;
-    .add-to-cart-section {
+    .product-info {
       flex: 1;
     }
     .product-description {
@@ -93,7 +93,7 @@ $verticalSpacing: 2rem;
     &__content {
       display: flex;
       flex-direction: row;
-      .add-to-cart-section {
+      .product-info {
         flex: 1;
       }
       .product-description {

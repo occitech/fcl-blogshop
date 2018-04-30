@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { H1 } from "theme/ui/atoms/Typography/Heading";
 import Description from "./Description";
-import AddToCartSection from "./AddToCartSection";
+import ProductInfo from "./ProductInfo";
 import "./ProductSynthesis.scss";
 
 const ProductSynthesis = ({ product }) => (
@@ -12,7 +12,7 @@ const ProductSynthesis = ({ product }) => (
     </div>
     <div className="product-view__content">
       <Description>{product.description}</Description>
-      <AddToCartSection product={product} />
+      <ProductInfo product={product} />
     </div>
   </div>
 );
