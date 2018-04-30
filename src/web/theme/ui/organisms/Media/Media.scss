@@ -81,7 +81,11 @@
         font-weight: $bold;
       }
     }
-
+    .media__details {
+      .button {
+        width: 100%;
+      }
+    }
     &:hover,
     &:focus {
       .media__details {
