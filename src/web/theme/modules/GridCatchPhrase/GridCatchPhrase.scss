@@ -1,0 +1,17 @@
+.grid-catch-phrase {
+  font-size: $giga;
+  .bold {
+    font-weight: $bold;
+  }
+  .primary {
+    color: $brandPrimary;
+    font-weight: $bold;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .grid-catch-phrase {
+    height: calc(100% - #{$mediaSpacing});
+    padding: auto 10;
+  }
+}

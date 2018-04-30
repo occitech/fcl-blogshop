@@ -3,17 +3,9 @@ import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
 import Link from "theme/ui/atoms/Typography/Link";
 import Media from "theme/ui/organisms/Media";
 import Button from "theme/ui/atoms/Button";
-const ProductItem = ({ title, name, prices, sku, imageUrl }) => {
-  return title ? (
-    <div className="media-container">
-      <div
-        className="product-item-title media"
-        dangerouslySetInnerHTML={{
-          __html: title
-        }}
-      />
-    </div>
-  ) : (
+
+const ProductItem = ({ name, prices, sku, imageUrl }) => {
+  return (
     <div className="media-container">
       <Media
         to={`product/${sku}`}
