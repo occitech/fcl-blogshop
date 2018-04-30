@@ -1,8 +1,25 @@
 .product-info {
   &__title {
     padding: 1em 0;
+    &:after {
+      content: "Boosted, meet your competitor!";
+    }
   }
   &__price {
     padding: 1em 0;
+  }
+  &__specification {
+    font-family: $secondaryFontFamily;
+    h2 {
+      font-family: $mainFontFamily;
+      color: $fontColor;
+    }
+
+    &__description {
+      margin-bottom: 1em;
+    }
+    &__attribute {
+      margin: 1em 0;
+    }
   }
 }
