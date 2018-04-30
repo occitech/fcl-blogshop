@@ -41,12 +41,10 @@ $moutainHeight: 6em;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    .category {
-      &-list-title {
-        font-size: $normal;
-        text-transform: uppercase;
-        font-weight: $bold;
-      }
+    &__title {
+      font-size: $normal;
+      text-transform: uppercase;
+      font-weight: $bold;
     }
   }
 

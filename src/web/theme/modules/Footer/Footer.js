@@ -16,7 +16,7 @@ const Footer = ({ loading, category }) => {
       <div className="footer__logo">
         <Logo />
         {loading ? (
-          <LoadingArea>Loading main category…</LoadingArea>
+          <LoadingArea>Loading...</LoadingArea>
         ) : (
           <span
             dangerouslySetInnerHTML={{
@@ -27,18 +27,18 @@ const Footer = ({ loading, category }) => {
       </div>
       <div className="footer__categories">
         {loading ? (
-          <LoadingArea>Loading subCategories</LoadingArea>
+          <LoadingArea>Loading...</LoadingArea>
         ) : (
           category.children.map(category => (
-            <div className="category-list-title" key={category.id}>
+            <div className="footer__categories__title" key={category.id}>
               {category.name}
             </div>
           ))
         )}
       </div>
       <div className="footer__copyright">
-        Copyright 2018 - Blog & Shop - All right reserved - Developped by Blog &
-        Shop
+        Copyright {new Date().getFullYear()} - Blog & Shop - All right reserved
+        - Developed by Blog & Shop
       </div>
     </footer>
   );
