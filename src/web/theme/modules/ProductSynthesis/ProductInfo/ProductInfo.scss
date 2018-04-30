@@ -3,13 +3,21 @@
     padding: 1em 0;
     &:after {
       content: "Boosted, meet your competitor!";
+      position: relative;
+      top: -1em;
     }
   }
   &__price {
-    padding: 1em 0;
+    font-size: $h2;
+    padding: 0em 0;
+  }
+  &__action {
+    margin: 2em 0;
   }
   &__specification {
+    margin: 5em 0;
     font-family: $secondaryFontFamily;
+
     h2 {
       font-family: $mainFontFamily;
       color: $fontColor;

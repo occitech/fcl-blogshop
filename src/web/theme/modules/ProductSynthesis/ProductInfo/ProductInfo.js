@@ -15,7 +15,7 @@ const ProductInfo = ({ product }) => {
       <div className="product-info__price">
         <Price price={product.prices.finalPrice.priceInclTax} />
       </div>
-      <div>
+      <div className="product-info__action">
         <Actions product={product} />
       </div>
       <div className="product-info__specification">

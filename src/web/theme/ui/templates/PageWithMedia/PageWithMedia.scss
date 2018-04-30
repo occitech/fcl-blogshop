@@ -45,7 +45,7 @@
     }
 
     &__content {
-      margin: -12em auto;
+      margin: -6em auto;
       box-shadow: 0 4px 10px 0 $shade03;
       max-width: $desktop;
       .product-view__title h1 {
@@ -54,6 +54,7 @@
     }
   }
 }
+
 @media screen and (min-width: $desktop) {
   .page-with-media {
     flex-direction: column;
@@ -67,7 +68,7 @@
       flex: 1;
     }
     &__content {
-      margin: -12em auto;
+      margin: -6em auto;
       box-shadow: 0 4px 10px 0 $shade03;
       max-width: $desktop;
       .product-view__title h1 {
@@ -80,7 +81,7 @@
 @media screen and (min-width: $largeDesktop) {
   .page-with-media {
     &__content {
-      margin: -12em auto;
+      margin: -6em auto;
       max-width: $largeDesktop;
       box-shadow: 0 4px 10px 0 $shade03;
       .product-view__title h1 {

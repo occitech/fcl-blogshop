@@ -1,3 +1,16 @@
+.product-description {
+  line-height: 1.5em;
+  > p {
+    font-size: $normal;
+    img:first-child {
+      max-height: 15em;
+      width: 100%;
+    }
+    img:last-child {
+      width: unset;
+    }
+  }
+}
 @media screen and (min-width: $tablet) {
   .product-description {
     > p {
@@ -14,7 +27,7 @@
     h2 {
       color: $fontPrimaryColor;
       border-left: 2px solid $brandPrimary;
-      padding-left: 1em;
+      padding-left: 1.5em;
     }
   }
 }
