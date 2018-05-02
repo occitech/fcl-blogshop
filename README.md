@@ -1,4 +1,4 @@
-Front-Commerce Lite - Thème Blogshop
+# Front-Commerce Lite - Thème Blogshop
 *Prototype your next eCommerce experiences using modern web technologies.*
 
 Front-Commerce is a React application with a GraphQL middleware for building eCommerce stores backed by existing headless platforms such as Magento2. [Learn more about the product.](https://developers.front-commerce.com/)
