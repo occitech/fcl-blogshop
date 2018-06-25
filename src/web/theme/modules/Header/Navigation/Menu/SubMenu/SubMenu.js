@@ -1,5 +1,6 @@
 import React from "react";
 import ProductInCorrespondantCategories from "./ProductInCorrespondantCategories.json";
+import Link from "theme/ui/atoms/Typography/Link";
 import "./SubMenu.scss";
 
 const navButtonClassNames = navButtonName => {
@@ -12,12 +13,11 @@ const SubMenu = ({ category }) => {
       {ProductInCorrespondantCategories.filter(product => {
         return product.categoryId === category.id;
       }).map(product => (
-        <div
-          key={`product-${product.name}`}
-          className={navButtonClassNames(category.name)}
-        >
-          {product.name}
-        </div>
+        <Link to={`/product/${product.name}`} key={`product-${product.name}`}>
+          <div className={navButtonClassNames(category.name)}>
+            {product.name}
+          </div>
+        </Link>
       ))}
     </div>
   );
