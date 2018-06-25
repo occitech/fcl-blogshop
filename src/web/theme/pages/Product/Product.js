@@ -11,6 +11,10 @@ import ProductSynthesis from "theme/modules/ProductSynthesis";
 import HeroImage from "theme/modules/HeroImage";
 import LoadingArea from "theme/ui/molecules/LoadingArea";
 import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
+import { H2 } from "theme/ui/atoms/Typography/Heading";
+import Tile from "theme/modules/Tile";
+
+import "./Product.scss";
 
 const Product = ({ loading, product }) => {
   if (loading) {
@@ -31,6 +35,14 @@ const Product = ({ loading, product }) => {
       >
         <ProductSynthesis product={product} />
       </PageWithMedia>
+      <div className="separator" />
+      <Tile
+        name={"related-product"}
+        title={<H2>You might also like these reviews</H2>}
+        children={<div>realted product</div>}
+        style={"white"}
+        contentStyle={"card"}
+      />
     </div>
   );
 };
