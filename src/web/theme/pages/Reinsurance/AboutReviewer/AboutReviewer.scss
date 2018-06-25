@@ -1,4 +1,4 @@
-$AboutReviewerTopMargin: 8em;
+$AboutReviewerTopMargin: 10em;
 
 .about-reviewer {
   border: 1px solid $brandPrimary;
@@ -22,6 +22,15 @@ $AboutReviewerTopMargin: 8em;
     flex-direction: column;
     align-items: center;
   }
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -2em;
+    & > * {
+      margin-right: 1em;
+    }
+  }
 }
 
 @media screen and (min-width: $desktop) {
@@ -32,6 +41,9 @@ $AboutReviewerTopMargin: 8em;
       h2 {
         font-size: 2em;
       }
+    }
+    &__action {
+      padding-top: 2em;
     }
   }
 }
