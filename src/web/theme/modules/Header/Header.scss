@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid $shade02;
+  z-index: 2;
+  position: relative;
 
   &__container {
     flex: 1;
