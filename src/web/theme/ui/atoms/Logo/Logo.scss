@@ -1,5 +1,5 @@
 .logo {
-  padding: 1em 3em;
+  padding: 1em 1em;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
@@ -9,4 +9,9 @@
   max-width: 7em;
   margin: 3em auto;
   font-family: $secondaryFontFamily;
+}
+@media screen and (min-width: $largeDesktop) {
+  .logo {
+    padding: 1em 3em;
+  }
 }
