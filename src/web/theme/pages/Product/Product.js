@@ -12,7 +12,9 @@ import HeroImage from "theme/modules/HeroImage";
 import LoadingArea from "theme/ui/molecules/LoadingArea";
 import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
 import { H2 } from "theme/ui/atoms/Typography/Heading";
+import Icon from "theme/ui/atoms/Icon";
 import Tile from "theme/modules/Tile";
+import RelatedProduct from "theme/pages/RelatedProduct";
 
 import "./Product.scss";
 
@@ -38,8 +40,17 @@ const Product = ({ loading, product }) => {
       <div className="separator" />
       <Tile
         name={"related-product"}
-        title={<H2>You might also like these reviews</H2>}
-        children={<div>realted product</div>}
+        title={
+          <Fragment>
+            <Icon icon="radiance-up" />
+            <H2>You might also like these reviews</H2>
+          </Fragment>
+        }
+        children={
+          <div>
+            <RelatedProduct />
+          </div>
+        }
         style={"white"}
         contentStyle={"card"}
       />

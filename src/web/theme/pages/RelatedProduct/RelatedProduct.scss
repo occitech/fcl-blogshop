@@ -1,0 +1,10 @@
+#related-product {
+  .tile__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .tile__content__title {
+      text-align: center;
+    }
+  }
+}
