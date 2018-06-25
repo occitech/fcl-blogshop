@@ -1,6 +1,5 @@
 import React from "react";
 import { H2 } from "theme/ui/atoms/Typography/Heading";
-import Button from "theme/ui/atoms/Button";
 import Link from "theme/ui/atoms/Typography/Link";
 import Icon from "theme/ui/atoms/Icon";
 import "./AboutReviewer.scss";
@@ -25,7 +24,12 @@ const AboutReviewer = () => {
         </p>
       </div>
       <div className="about-reviewer__action">
-        <Button to="/">button</Button>
+        <Link to="/subscription" type="lightning">
+          More informations
+        </Link>
+        <Link to="/subscription" type="plain">
+          Become a reviewer
+        </Link>
       </div>
     </div>
   );
