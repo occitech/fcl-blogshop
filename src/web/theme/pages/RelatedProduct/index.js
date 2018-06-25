@@ -1,3 +1,3 @@
-import RelatedProduct from "./RelatedProduct";
+import RelatedProducts from "./RelatedProducts";
 
-export default RelatedProduct;
+export default RelatedProducts;
