@@ -8,6 +8,27 @@
     }
     .media-grid {
       max-height: 20em;
+      .media__details {
+        width: 100%;
+        &__title {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $largeDesktop) {
+  #related-products {
+    .tile__content {
+      .media-grid {
+        .media__details {
+          width: 50%;
+          &__title {
+            padding-left: 2em;
+          }
+        }
+      }
     }
   }
 }
