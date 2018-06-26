@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Redirect from "react-router/Redirect";
 import withRouter from "react-router/withRouter";
 import compose from "recompose/compose";
@@ -14,7 +14,7 @@ import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
 import { H2 } from "theme/ui/atoms/Typography/Heading";
 import Icon from "theme/ui/atoms/Icon";
 import Tile from "theme/modules/Tile";
-import RelatedProduct from "theme/pages/RelatedProduct";
+import RelatedProducts from "theme/pages/RelatedProduct";
 
 import "./Product.scss";
 
@@ -39,7 +39,7 @@ const Product = ({ loading, product }) => {
       </PageWithMedia>
       <div className="separator" />
       <Tile
-        name={"related-product"}
+        name={"related-products"}
         title={
           <Fragment>
             <Icon icon="radiance-up" />
@@ -47,9 +47,11 @@ const Product = ({ loading, product }) => {
           </Fragment>
         }
         children={
-          <div>
-            <RelatedProduct />
-          </div>
+          <Fragment>
+            <RelatedProducts
+              products={product.related && product.related.slice(0, 2)}
+            />
+          </Fragment>
         }
         style={"white"}
         contentStyle={"card"}
