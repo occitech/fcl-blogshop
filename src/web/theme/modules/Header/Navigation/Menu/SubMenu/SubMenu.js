@@ -13,7 +13,7 @@ const SubMenu = ({ category }) => {
       {ProductInCorrespondantCategories.filter(product => {
         return product.categoryId === category.id;
       }).map(product => (
-        <Link to={`/product/${product.name}`} key={`product-${product.name}`}>
+        <Link to={`/product/${product.sku}`} key={`product-${product.name}`}>
           <div className={navButtonClassNames(category.name)}>
             {product.name}
           </div>
