@@ -25,7 +25,10 @@ const ProductInfo = ({ product }) => {
           information.
         </span>
         {infos.map(info => (
-          <div className="product-info__specification__attribute">
+          <div
+            key={info.attribute}
+            className="product-info__specification__attribute"
+          >
             <strong>{info.attribute}</strong>
             <span> : {info.value}</span>
           </div>

@@ -37,25 +37,29 @@ const Product = ({ loading, product }) => {
       >
         <ProductSynthesis product={product} />
       </PageWithMedia>
-      <div className="separator" />
-      <Tile
-        name={"related-products"}
-        title={
-          <Fragment>
-            <Icon icon="radiance-up" />
-            <H2>You might also like these reviews</H2>
-          </Fragment>
-        }
-        children={
-          <Fragment>
-            <RelatedProducts
-              products={product.related && product.related.slice(0, 2)}
-            />
-          </Fragment>
-        }
-        style={"white"}
-        contentStyle={"card"}
-      />
+      {product.related.length > 0 && (
+        <Fragment>
+          <div className="separator" />
+          <Tile
+            name={"related-products"}
+            title={
+              <Fragment>
+                <Icon icon="radiance-up" />
+                <H2>You might also like these reviews</H2>
+              </Fragment>
+            }
+            children={
+              <Fragment>
+                <RelatedProducts
+                  products={product.related && product.related.slice(0, 2)}
+                />
+              </Fragment>
+            }
+            style={"white"}
+            contentStyle={"card"}
+          />
+        </Fragment>
+      )}
     </div>
   );
 };

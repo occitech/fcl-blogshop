@@ -11,7 +11,7 @@ const ProductSynthesis = ({ product }) => (
       <H1>{product.name}</H1>
     </div>
     <div className="product-view__content">
-      <Description>{product.description}</Description>
+      {product.description && <Description>{product.description}</Description>}
       <ProductInfo product={product} />
     </div>
   </div>
