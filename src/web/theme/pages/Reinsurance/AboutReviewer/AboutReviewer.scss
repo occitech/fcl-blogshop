@@ -1,0 +1,49 @@
+$AboutReviewerTopMargin: 10em;
+
+.about-reviewer {
+  border: 1px solid $brandPrimary;
+  display: flex;
+  flex-direction: column;
+  margin-top: $AboutReviewerTopMargin;
+
+  &__title {
+    color: $brandPrimary;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+
+    position: relative;
+    margin-top: -$AboutReviewerTopMargin;
+    background: $white;
+    display: inline-block;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -2em;
+    & > * {
+      margin-right: 1em;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .about-reviewer {
+    &__title {
+      padding: 2em;
+
+      h2 {
+        font-size: 2em;
+      }
+    }
+    &__action {
+      padding-top: 2em;
+    }
+  }
+}
