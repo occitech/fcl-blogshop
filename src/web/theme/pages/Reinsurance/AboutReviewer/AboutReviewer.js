@@ -25,7 +25,7 @@ const AboutReviewer = () => {
       </div>
       <div className="about-reviewer__action">
         <Link to="/subscription" type="lightning">
-          More informations
+          More information
         </Link>
         <Link to="/subscription" type="plain">
           Become a reviewer
@@ -34,7 +34,5 @@ const AboutReviewer = () => {
     </div>
   );
 };
-
-AboutReviewer.proptype = {};
 
 export default AboutReviewer;
