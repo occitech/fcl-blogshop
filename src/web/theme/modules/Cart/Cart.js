@@ -46,7 +46,9 @@ class Cart extends Component {
       <Fragment>
         <ModalHeader>
           My Cart
-          {cartLength > 0 ? cartLength === 1 : ` - ${cartLength} items`}
+          {cartLength > 0
+            ? cartLength === 1 ? " - 1 item" : ` - ${cartLength} items`
+            : null}
         </ModalHeader>
         <ModalContent>
           {cartLength > 0 ? (
