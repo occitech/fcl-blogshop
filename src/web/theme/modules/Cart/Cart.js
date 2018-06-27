@@ -86,4 +86,7 @@ class Cart extends Component {
   }
 }
 
-export default compose(EnhanceCart(CartQuery), withRouter)(Cart);
+export default compose(
+  EnhanceCart(CartQuery),
+  withRouter
+)(Cart);
