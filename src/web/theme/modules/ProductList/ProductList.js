@@ -10,7 +10,9 @@ const ProductList = ({ products }) => {
   return (
     <MediaGrid>
       <GridCatchPhrase content="<span>Don’t just buy</span><span class='bold'> a product,</span><span> buy</span><span class='primary'> a complete experience!</span>" />
-      {products.map(product => <ProductItem key={product.sku} {...product} />)}
+      {products.map((product, index) => (
+        <ProductItem key={product.sku} {...product} index={index} />
+      ))}
     </MediaGrid>
   );
 };
