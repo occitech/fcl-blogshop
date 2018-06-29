@@ -19,7 +19,7 @@ const ProductItem = ({ name, prices, sku, imageUrl, index }) => {
           media={<img src={createMediaUrlFromPath(imageUrl)} alt={name} />}
           renderDetails={() => (
             <Fragment>
-              <Link to={`product/${sku}`} type="reversed">
+              <Link to={`/product/${sku}`} type="reversed">
                 <div className="media__details__title">{name}</div>
                 <Button>Read the full story</Button>
               </Link>

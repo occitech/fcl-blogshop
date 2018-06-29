@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Redirect from "react-router/Redirect";
 import withRouter from "react-router/withRouter";
 import compose from "recompose/compose";
@@ -11,6 +11,12 @@ import ProductSynthesis from "theme/modules/ProductSynthesis";
 import HeroImage from "theme/modules/HeroImage";
 import LoadingArea from "theme/ui/molecules/LoadingArea";
 import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
+import { H2 } from "theme/ui/atoms/Typography/Heading";
+import Icon from "theme/ui/atoms/Icon";
+import Tile from "theme/modules/Tile";
+import RelatedProducts from "theme/pages/RelatedProduct";
+
+import "./Product.scss";
 
 const Product = ({ loading, product }) => {
   if (loading) {
@@ -31,6 +37,29 @@ const Product = ({ loading, product }) => {
       >
         <ProductSynthesis product={product} />
       </PageWithMedia>
+      {product.related.length > 0 && (
+        <Fragment>
+          <div className="separator" />
+          <Tile
+            name={"related-products"}
+            title={
+              <Fragment>
+                <Icon icon="radiance-up" />
+                <H2>You might also like these reviews</H2>
+              </Fragment>
+            }
+            children={
+              <Fragment>
+                <RelatedProducts
+                  products={product.related && product.related.slice(0, 2)}
+                />
+              </Fragment>
+            }
+            style={"white"}
+            contentStyle={"card"}
+          />
+        </Fragment>
+      )}
     </div>
   );
 };
