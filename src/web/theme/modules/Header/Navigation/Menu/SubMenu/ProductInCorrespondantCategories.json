@@ -1,30 +1,37 @@
 [
   {
     "name": "Inboard M-1",
+    "sku": "Inboard M-1",
     "categoryId": 50
   },
   {
     "name": "Otonohm Nomad Battery",
+    "sku": "Otonohm Nomad Battery",
     "categoryId": 52
   },
   {
     "name": "Roadster Backpack",
+    "sku": "Roadster Backpack",
     "categoryId": 52
   },
   {
     "name": "D-Spec Camera",
+    "sku": "D-Spec Camera",
     "categoryId": 51
   },
   {
     "name": "Snoozy Sound Station",
+    "sku": "Snoozy Sound Station",
     "categoryId": 53
   },
   {
     "name": "Lumin'Us Speaker",
+    "sku": "Lumin'Us Speaker",
     "categoryId": 53
   },
   {
     "name": "Gravity Skateboard",
+    "sku": "Gravity Skateboard",
     "categoryId": 50
   }
 ]

@@ -1,7 +1,28 @@
 a {
   color: $brandPrimary;
   font-weight: bold;
-}
-a.reversed {
-  color: $reverseFontColor;
+
+  &.lightning {
+    color: $brandPrimary;
+    background: $white;
+    border: 2px solid $brandPrimary;
+    text-decoration: none;
+    font-weight: $bold;
+    padding: 1em 2em;
+    font-family: $secondaryFontFamily;
+  }
+
+  &.plain {
+    color: $white;
+    background: $brandPrimary;
+    border: 2px solid $brandPrimary;
+    text-decoration: none;
+    font-weight: $bold;
+    padding: 1em 2em;
+    font-family: $secondaryFontFamily;
+  }
+
+  &.reversed {
+    color: $reverseFontColor;
+  }
 }

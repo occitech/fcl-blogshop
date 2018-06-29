@@ -47,9 +47,7 @@ class Cart extends Component {
         <ModalHeader>
           My Cart
           {cartLength > 0
-            ? cartLength === 1
-              ? " - 1 item"
-              : ` - ${cartLength} items`
+            ? cartLength === 1 ? " - 1 item" : ` - ${cartLength} items`
             : null}
         </ModalHeader>
         <ModalContent>
@@ -88,4 +86,7 @@ class Cart extends Component {
   }
 }
 
-export default compose(EnhanceCart(CartQuery), withRouter)(Cart);
+export default compose(
+  EnhanceCart(CartQuery),
+  withRouter
+)(Cart);

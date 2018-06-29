@@ -24,6 +24,11 @@
   .product-description {
     flex-direction: column;
     margin-bottom: 2rem;
+    > p {
+      img:first-child {
+        max-height: 11em;
+      }
+    }
     h2 {
       color: $fontPrimaryColor;
       border-left: 2px solid $brandPrimary;

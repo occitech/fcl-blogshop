@@ -9,6 +9,7 @@ import Footer from "./theme/modules/Footer";
 import Home from "./theme/pages/Home";
 import Product from "./theme/pages/Product";
 import Checkout from "./theme/pages/Checkout";
+import Subscription from "theme/pages/Subscription";
 import NotFound from "./theme/pages/NotFound";
 
 export default () => (
@@ -18,6 +19,7 @@ export default () => (
         <Route exact path="/" component={Home} />
         <Route path="/product/:sku" component={Product} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/subscription" component={Subscription} />
 
         <Route component={NotFound} />
       </Switch>
