@@ -12,6 +12,12 @@ fragment Product on Product {
       }
     }
   }
+  related {
+    sku
+    name
+    imageUrl
+    description
+  }
 }
 
 query Product($sku: String!) {

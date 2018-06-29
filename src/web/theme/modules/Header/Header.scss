@@ -36,7 +36,7 @@
 @media screen and (min-width: $desktop) {
   .header {
     &__container {
-      max-width: $largeDesktop;
+      max-width: 200rem;
     }
 
     &__logo {
