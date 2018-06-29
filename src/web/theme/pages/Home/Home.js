@@ -6,11 +6,14 @@ import LoadingArea from "theme/ui/molecules/LoadingArea";
 import Page from "theme/ui/templates/Page";
 import GridCatchPhrase from "theme/modules/GridCatchPhrase";
 import AboutReviewer from "theme/pages/Reinsurance/AboutReviewer";
+import Loading from "theme/ui/atoms/Loading";
 
 const Home = ({ store, category, loading }) => (
   <Page>
     {loading ? (
-      <LoadingArea>Loading products…</LoadingArea>
+      <LoadingArea>
+        <Loading />
+      </LoadingArea>
     ) : (
       <Fragment>
         <ProductList

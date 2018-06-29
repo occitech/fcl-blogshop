@@ -5,6 +5,7 @@ import StoreContact from "../StoreContact";
 import EnhanceFooter from "./EnhanceFooter";
 import FooterQuery from "./FooterQuery.gql";
 import LoadingArea from "theme/ui/molecules/LoadingArea";
+import Loading from "theme/ui/atoms/Loading";
 import Logo from "theme/ui/atoms/Logo";
 import "./Footer.scss";
 import Mountain from "./Mountains.png";
@@ -16,7 +17,9 @@ const Footer = ({ loading, category }) => {
       <div className="footer__logo">
         <Logo />
         {loading ? (
-          <LoadingArea>Loading...</LoadingArea>
+          <LoadingArea>
+            <Loading />
+          </LoadingArea>
         ) : (
           <span
             dangerouslySetInnerHTML={{
@@ -27,7 +30,9 @@ const Footer = ({ loading, category }) => {
       </div>
       <div className="footer__categories">
         {loading ? (
-          <LoadingArea>Loading...</LoadingArea>
+          <LoadingArea>
+            <Loading />
+          </LoadingArea>
         ) : (
           category.children.map(category => (
             <div className="footer__categories__title" key={category.id}>
