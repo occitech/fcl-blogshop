@@ -18,6 +18,7 @@ export default async modules => {
   // support remote schemas yet
   // see https://github.com/gramps-graphql/gramps/issues/47
   const GraphQLOptions = prepare({ dataSources: modules });
+  console.log(GraphQLOptions);
   GraphQLOptions.schema = mergeSchemas({
     schemas: [
       await remoteFrontCommerceMagento2DemoSchema(),

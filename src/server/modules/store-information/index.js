@@ -4,6 +4,7 @@ import resolvers from "./resolvers";
 
 export default {
   namespace: "StoreInformation",
+  // dependencies: ['Magento2/Catalog'],
   context: loader,
   typeDefs,
   resolvers

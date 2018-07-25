@@ -13,6 +13,7 @@ import Button from "theme/ui/atoms/Button";
 import LoadingArea from "theme/ui/molecules/LoadingArea";
 import Recap from "theme/ui/organisms/Recap";
 import RecapTotal from "theme/ui/organisms/RecapTotal";
+import Loading from "theme/ui/atoms/Loading";
 
 class Cart extends Component {
   constructor() {
@@ -33,7 +34,9 @@ class Cart extends Component {
         <Fragment>
           <ModalHeader>My Cart</ModalHeader>
           <ModalContent>
-            <LoadingArea>Loading…</LoadingArea>
+            <LoadingArea>
+              <Loading />
+            </LoadingArea>
           </ModalContent>
         </Fragment>
       );
@@ -47,7 +50,9 @@ class Cart extends Component {
         <ModalHeader>
           My Cart
           {cartLength > 0
-            ? cartLength === 1 ? " - 1 item" : ` - ${cartLength} items`
+            ? cartLength === 1
+              ? " - 1 item"
+              : ` - ${cartLength} items`
             : null}
         </ModalHeader>
         <ModalContent>
