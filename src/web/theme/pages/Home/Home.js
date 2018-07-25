@@ -7,6 +7,7 @@ import Page from "theme/ui/templates/Page";
 import GridCatchPhrase from "theme/modules/GridCatchPhrase";
 import AboutReviewer from "theme/pages/Reinsurance/AboutReviewer";
 import Loading from "theme/ui/atoms/Loading";
+import TransitionOnScroll from "theme/ui/molecules/TransitionOnScroll";
 
 const Home = ({ store, category, loading }) => (
   <Page>
@@ -22,7 +23,9 @@ const Home = ({ store, category, loading }) => (
           }
           products={category.layer.products}
         />
-        <AboutReviewer />
+        <TransitionOnScroll type="fade-in-left" duration={0.5} translateX={20}>
+          <AboutReviewer />
+        </TransitionOnScroll>
       </Fragment>
     )}
   </Page>
