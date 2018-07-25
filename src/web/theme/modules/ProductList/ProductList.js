@@ -9,7 +9,9 @@ const ProductList = ({ catchPhrase, products }) => {
   return (
     <MediaGrid>
       {catchPhrase}
-      {products.map(product => <ProductItem key={product.sku} {...product} />)}
+      {products.map((product, index) => (
+        <ProductItem key={product.sku} {...product} index={index} />
+      ))}
     </MediaGrid>
   );
 };
